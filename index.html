@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <title>МЫНЕМЫ — Official Website</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>МЫНЕМЫ — официальный сайт</title>
 
   <meta
           name="description"
-          content="Официальный сайт группы МЫНЕМЫ. Музыка, видео, фото и контакты для букинга."
+          content="Официальный сайт группы МЫНЕМЫ. Музыка, видео, фото и контакты."
   />
 
   <link rel="stylesheet" href="style.css" />
@@ -19,82 +19,79 @@
 <header class="hero" id="top">
   <nav class="nav">
     <a href="#top" class="nav-logo-link">
-      <img class="nav-logo" src="images/logo/logo.png" alt="МЫНЕМЫ logo" />
+      <img class="nav-logo" src="images/logo/logo.png" alt="МЫНЕМЫ" />
     </a>
 
     <div class="nav-links">
-      <a href="#music">Music</a>
-      <a href="#video">Video</a>
-      <a href="#bio">Bio</a>
-      <a href="#contact">Contact</a>
+      <a href="#music">Музыка</a>
+      <a href="#video">Видео</a>
+      <a href="#bio">Био</a>
+      <a href="#gallery">Фото</a>
+      <a href="#contact">Контакты</a>
     </div>
   </nav>
 
   <div class="hero-bg"></div>
 
-  <div class="hero-content">
-    <p class="eyebrow">Alternative Rock / Metal</p>
+  <div class="hero-stage">
+    <div class="hero-copy">
+      <p class="hero-genre">MODERN METALCORE</p>
 
-    <img class="hero-logo" src="images/logo/logo.png" alt="МЫНЕМЫ" />
+      <img class="hero-logo" src="images/logo/logo.png" alt="МЫНЕМЫ" />
 
-    <p class="hero-text">
-      Dark, loud and emotionally direct. Heavy guitars,
-      raw lyrics and modern alternative sound.
-    </p>
+      <p class="hero-line">ТАМ, ГДЕ МОЛЧИТ ЗВЁЗДНЫЙ СВЕТ</p>
 
-    <div class="hero-buttons">
-      <a href="#music" class="btn btn-primary">Listen now</a>
-      <a href="#video" class="btn btn-secondary">Watch video</a>
+      <div class="hero-buttons">
+        <a href="#music" class="btn btn-primary">Слушать</a>
+        <a href="#video" class="btn btn-secondary">Смотреть видео</a>
+      </div>
     </div>
-  </div>
-
-  <div class="hero-socials">
-    <a href="#" target="_blank" rel="noopener" aria-label="Spotify">
-      <img src="images/btn/spotify.avif" alt="Spotify" />
-    </a>
-    <a href="#" target="_blank" rel="noopener" aria-label="YouTube">
-      <img src="images/btn/youtube.avif" alt="YouTube" />
-    </a>
-    <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
-      <img src="images/btn/instagram.avif" alt="Instagram" />
-    </a>
-    <a href="#" target="_blank" rel="noopener" aria-label="Apple Music">
-      <img src="images/btn/apple.avif" alt="Apple Music" />
-    </a>
   </div>
 </header>
 
 <main>
   <section class="section music" id="music">
     <div class="section-header">
-      <p class="eyebrow">Listen</p>
-      <h2>Music</h2>
+      <p class="eyebrow">Слушать</p>
+      <h2>Музыка</h2>
     </div>
 
-    <div class="spotify-card">
-      <iframe
-              data-testid="embed-iframe"
-              src="https://open.spotify.com/embed/artist/1yFWRNC3FHlcJtTmBTIbtt?utm_source=generator"
-              width="100%"
-              height="352"
-              frameborder="0"
-              allowfullscreen
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-      ></iframe>
+    <div class="music-card">
+      <div class="music-info">
+<!--        <p class="eyebrow">МЫНЕМЫ</p>-->
+
+        <h3>Слушай нас на Spotify</h3>
+
+<!--        <p>-->
+<!--          Песни, в которых тяжёлый звук встречается с тем, что обычно-->
+<!--          остаётся внутри.-->
+<!--        </p>-->
+      </div>
+
+      <div class="spotify-embed">
+        <iframe
+                src="https://open.spotify.com/embed/artist/1yFWRNC3FHlcJtTmBTIbtt?utm_source=generator&theme=0"
+                width="100%"
+                height="352"
+                frameborder="0"
+                allowfullscreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+        ></iframe>
+      </div>
     </div>
   </section>
 
   <section class="section video" id="video">
     <div class="section-header">
-      <p class="eyebrow">Watch</p>
-      <h2>Featured Video</h2>
+      <p class="eyebrow">Смотреть</p>
+      <h2>Видео</h2>
     </div>
 
     <div class="video-wrapper">
       <iframe
               src="https://www.youtube.com/embed/aYAScBA39OQ?si=l9Ss8a-y7rQGvvNQ"
-              title="МЫНЕМЫ official video"
+              title="МЫНЕМЫ — видео"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
@@ -109,43 +106,44 @@
               rel="noopener"
               class="text-link"
       >
-        More videos on YouTube
+        Больше видео на YouTube
       </a>
     </div>
   </section>
 
   <section class="section bio" id="bio">
     <div class="bio-image">
-      <img src="images/photo/bio.jpg" alt="МЫНЕМЫ band photo" />
+      <img src="images/photo/bio.jpg" alt="Фото группы МЫНЕМЫ" />
     </div>
 
     <div class="bio-text">
-      <p class="eyebrow">Bio</p>
-      <h2>Heavy sound. Dark mood. Direct emotion.</h2>
+      <p class="eyebrow">Био</p>
+      <h2>Мы говорим наши мысли через звук.</h2>
 
       <p>
-        МЫНЕМЫ — современная alternative rock / metal группа с тяжёлыми
-        гитарами, мрачной атмосферой и эмоциональной лирикой.
+        Привет — мы МЫНЕМЫ. Нас двое. Мы встретились и объединились, чтобы
+        озвучить то, что живёт внутри. Мы говорим наши мысли через звук — с
+        оттенком минора.
       </p>
 
       <p>
-        Музыка группы соединяет плотный роковый саунд, мелодичные хуки и
-        честную подачу без лишнего пафоса.
+        Этот проект не просто о музыке, а о том, что рождается в тишине
+        между словами. Мы не рассказываем истории — мы проживаем их заново.
       </p>
     </div>
   </section>
 
   <section class="section gallery" id="gallery">
     <div class="section-header">
-      <p class="eyebrow">Photos</p>
-      <h2>Gallery</h2>
+      <p class="eyebrow">Фото</p>
+      <h2>Галерея</h2>
     </div>
 
     <div class="gallery-grid">
-      <img src="images/photo/001.jpg" alt="МЫНЕМЫ photo 1" />
-      <img src="images/photo/002.jpg" alt="МЫНЕМЫ photo 2" />
-      <img src="images/photo/003.jpg" alt="МЫНЕМЫ photo 3" />
-      <img src="images/photo/004.jpg" alt="МЫНЕМЫ photo 4" />
+      <img src="images/photo/001.jpg" alt="Фото МЫНЕМЫ 1" />
+      <img src="images/photo/002.jpg" alt="Фото МЫНЕМЫ 2" />
+      <img src="images/photo/003.jpg" alt="Фото МЫНЕМЫ 3" />
+      <img src="images/photo/004.jpg" alt="Фото МЫНЕМЫ 4" />
     </div>
   </section>
 </main>
@@ -153,35 +151,35 @@
 <footer class="footer" id="contact">
   <div class="footer-inner">
     <div class="footer-contact">
-      <p class="eyebrow">Contact</p>
-      <h2>Representation</h2>
+      <p class="eyebrow">Контакты</p>
+      <h2>Связаться</h2>
 
       <div class="contact-grid">
         <div>
-          <h3>Management</h3>
+          <h3>Менеджмент</h3>
           <p>
-            Дмитрий Букреев<br />
-            <a href="mailto:minemiband@yandex.com">
+            Dmitrii Bukreev<br />
+            <a href="mailto:1stringsamurai@gmail.com">
               1stringsamurai@gmail.com
             </a>
           </p>
         </div>
 
         <div>
-          <h3>Booking</h3>
+          <h3>Букинг</h3>
           <p>
-            Дмитрий Букреев<br />
-            <a href="mailto:minemiband@yandex.com">
+            Dmitrii Bukreev<br />
+            <a href="mailto:1stringsamurai@gmail.com">
               1stringsamurai@gmail.com
             </a>
           </p>
         </div>
 
         <div>
-          <h3>PR</h3>
+          <h3>Пресса</h3>
           <p>
-            Мария Лепетова<br />
-            <a href="mailto:minemiband@yandex.com">
+            Dmitrii Bukreev<br />
+            <a href="mailto:1stringsamurai@gmail.com">
               1stringsamurai@gmail.com
             </a>
           </p>
@@ -190,7 +188,7 @@
     </div>
 
     <div class="footer-links">
-      <h3>Links</h3>
+      <h3>Ссылки</h3>
 
       <ul>
         <li><a href="#" target="_blank" rel="noopener">Spotify</a></li>
@@ -198,14 +196,14 @@
         <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
         <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
         <li><a href="#" target="_blank" rel="noopener">Apple Music</a></li>
-        <li><a href="#" target="_blank" rel="noopener">Vkontakte</a></li>
+        <li><a href="#" target="_blank" rel="noopener">ВКонтакте</a></li>
       </ul>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <p>© 2026 МЫНЕМЫ. All rights reserved.</p>
-    <a href="#top">Back to top</a>
+    <p>© 2026 МЫНЕМЫ. Все права защищены.</p>
+    <a href="#top">Наверх</a>
   </div>
 </footer>
 </body>
