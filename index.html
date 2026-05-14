@@ -15,7 +15,31 @@
   <link rel="apple-touch-icon" href="images/logo/vaficon.png" />
 </head>
 
-<body>
+<body class="lang-modal-open">
+<div class="language-modal" id="languageModal">
+  <div class="language-modal-card">
+    <img
+            class="language-modal-logo"
+            src="images/logo/logo.png"
+            alt="МЫНЕМЫ"
+    />
+
+    <p class="language-modal-kicker">Choose language / Выберите язык</p>
+
+    <h2>МЫНЕМЫ</h2>
+
+    <div class="language-buttons">
+      <button type="button" class="language-btn" data-lang-choice="ru">
+        Русский
+      </button>
+
+      <button type="button" class="language-btn" data-lang-choice="en">
+        English
+      </button>
+    </div>
+  </div>
+</div>
+
 <header class="hero" id="top">
   <nav class="nav">
     <a href="#top" class="nav-logo-link">
@@ -23,11 +47,21 @@
     </a>
 
     <div class="nav-links">
-      <a href="#music">Музыка</a>
-      <a href="#video">Видео</a>
-      <a href="#bio">Био</a>
-      <a href="#gallery">Фото</a>
-      <a href="#contact">Контакты</a>
+      <div class="nav-language-switch" aria-label="Language switcher">
+        <button type="button" class="nav-lang-btn" data-lang-choice="ru">
+          RU
+        </button>
+        <span>/</span>
+        <button type="button" class="nav-lang-btn" data-lang-choice="en">
+          EN
+        </button>
+      </div>
+
+      <a href="#music" data-i18n="navMusic">Музыка</a>
+      <a href="#video" data-i18n="navVideo">Видео</a>
+      <a href="#bio" data-i18n="navBio">Био</a>
+      <a href="#gallery" data-i18n="navGallery">Фото</a>
+      <a href="#contact" data-i18n="navContact">Контакты</a>
     </div>
   </nav>
 
@@ -39,11 +73,17 @@
 
       <img class="hero-logo" src="images/logo/logo.png" alt="МЫНЕМЫ" />
 
-      <p class="hero-line">ТАМ, ГДЕ МОЛЧИТ ЗВЁЗДНЫЙ СВЕТ</p>
+      <p class="hero-line" data-i18n="heroLine">
+        ТАМ, ГДЕ МОЛЧИТ ЗВЁЗДНЫЙ СВЕТ
+      </p>
 
       <div class="hero-buttons">
-        <a href="#music" class="btn btn-primary">Слушать</a>
-        <a href="#video" class="btn btn-secondary">Смотреть видео</a>
+        <a href="#music" class="btn btn-primary" data-i18n="listenBtn">
+          Слушать
+        </a>
+        <a href="#video" class="btn btn-secondary" data-i18n="watchBtn">
+          Смотреть видео
+        </a>
       </div>
     </div>
   </div>
@@ -52,19 +92,12 @@
 <main>
   <section class="section music" id="music">
     <div class="section-header">
-      <h2>Музыка</h2>
+      <h2 data-i18n="musicTitle">Музыка</h2>
     </div>
 
     <div class="music-card">
       <div class="music-info">
-<!--        <p class="eyebrow">МЫНЕМЫ</p>-->
-
-        <h3>Слушай нас на Spotify</h3>
-
-<!--        <p>-->
-<!--          Песни, в которых тяжёлый звук встречается с тем, что обычно-->
-<!--          остаётся внутри.-->
-<!--        </p>-->
+        <h3 data-i18n="spotifyTitle">Слушай нас на Spotify</h3>
       </div>
 
       <div class="spotify-embed">
@@ -83,7 +116,7 @@
 
   <section class="section video" id="video">
     <div class="section-header">
-      <h2>Видео</h2>
+      <h2 data-i18n="videoTitle">Видео</h2>
     </div>
 
     <div class="video-wrapper">
@@ -99,10 +132,11 @@
 
     <div class="more-videos">
       <a
-              href="https://www.youtube.com/"
+              href="https://www.youtube.com/channel/UCQ9KxcL66N8G0d1xaITPLQA"
               target="_blank"
               rel="noopener"
               class="text-link"
+              data-i18n="moreVideos"
       >
         Больше видео на YouTube
       </a>
@@ -115,16 +149,17 @@
     </div>
 
     <div class="bio-text">
-      <p class="eyebrow">Био</p>
-      <h2>Мы говорим наши мысли через звук.</h2>
+      <p class="eyebrow" data-i18n="bioSmall">Био</p>
 
-      <p>
+      <h2 data-i18n="bioTitle">Мы говорим наши мысли через звук.</h2>
+
+      <p data-i18n="bioText1">
         Привет — мы МЫНЕМЫ. Нас двое. Мы встретились и объединились, чтобы
         озвучить то, что живёт внутри. Мы говорим наши мысли через звук — с
         оттенком минора.
       </p>
 
-      <p>
+      <p data-i18n="bioText2">
         Этот проект не просто о музыке, а о том, что рождается в тишине
         между словами. Мы не рассказываем истории — мы проживаем их заново.
       </p>
@@ -133,8 +168,8 @@
 
   <section class="section gallery" id="gallery">
     <div class="section-header">
-      <p class="eyebrow">Фото</p>
-      <h2>Галерея</h2>
+      <p class="eyebrow" data-i18n="gallerySmall">Фото</p>
+      <h2 data-i18n="galleryTitle">Галерея</h2>
     </div>
 
     <div class="gallery-grid">
@@ -149,14 +184,14 @@
 <footer class="footer" id="contact">
   <div class="footer-inner">
     <div class="footer-contact">
-      <p class="eyebrow">Контакты</p>
-      <h2>Связаться</h2>
+      <p class="eyebrow" data-i18n="contactsSmall">Контакты</p>
+      <h2 data-i18n="contactsTitle">Связаться</h2>
 
       <div class="contact-grid">
         <div>
-          <h3>Менеджмент</h3>
+          <h3 data-i18n="management">Менеджмент</h3>
           <p>
-            Мария Лепетова<br />
+            <span data-i18n="managementName">Мария Лепетова</span><br />
             <a href="mailto:minemiband@yandex.com">
               minemiband@yandex.com
             </a>
@@ -164,9 +199,9 @@
         </div>
 
         <div>
-          <h3>Букинг</h3>
+          <h3 data-i18n="booking">Букинг</h3>
           <p>
-            Дмитрий Букреев<br />
+            <span data-i18n="bookingName">Дмитрий Букреев</span><br />
             <a href="mailto:minemiband@yandex.com">
               minemiband@yandex.com
             </a>
@@ -174,9 +209,9 @@
         </div>
 
         <div>
-          <h3>Пресса</h3>
+          <h3 data-i18n="press">Пресса</h3>
           <p>
-            Дмитрий Букреев<br />
+            <span data-i18n="pressName">Дмитрий Букреев</span><br />
             <a href="mailto:minemiband@yandex.com">
               minemiband@yandex.com
             </a>
@@ -186,42 +221,57 @@
     </div>
 
     <div class="footer-links">
-      <h3>Ссылки</h3>
+      <h3 data-i18n="links">Ссылки</h3>
 
       <ul>
         <li>
-          <a href="https://music.yandex.ru/artist/24103901" target="_blank" rel="noopener">
+          <a
+                  href="https://music.yandex.ru/artist/24103901"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="yandexMusic"
+          >
             Яндекс Музыка
           </a>
         </li>
 
         <li>
-          <a href="https://www.youtube.com/channel/UCQ9KxcL66N8G0d1xaITPLQA" target="_blank" rel="noopener">
+          <a
+                  href="https://www.youtube.com/channel/UCQ9KxcL66N8G0d1xaITPLQA"
+                  target="_blank"
+                  rel="noopener"
+          >
             YouTube
           </a>
         </li>
 
         <li>
-          <a href="https://www.instagram.com/minemiband/" target="_blank" rel="noopener">
+          <a
+                  href="https://www.instagram.com/minemiband/"
+                  target="_blank"
+                  rel="noopener"
+          >
             Instagram
           </a>
         </li>
 
-<!--        ДОБАВИТЬ КОГДА БУДЕТ ФБ-->
-<!--        <li>-->
-<!--          <a href="https://www.facebook.com/" target="_blank" rel="noopener">-->
-<!--            Facebook-->
-<!--          </a>-->
-<!--        </li>-->
-
         <li>
-          <a href="https://music.apple.com/us/artist/%D0%BC%D1%8B%D0%BD%D0%B5%D0%BC%D1%8B/1808024866" target="_blank" rel="noopener">
+          <a
+                  href="https://music.apple.com/us/artist/%D0%BC%D1%8B%D0%BD%D0%B5%D0%BC%D1%8B/1808024866"
+                  target="_blank"
+                  rel="noopener"
+          >
             Apple Music
           </a>
         </li>
 
         <li>
-          <a href="https://vk.com/minemiband" target="_blank" rel="noopener">
+          <a
+                  href="https://vk.com/minemiband"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n="vkontakte"
+          >
             ВКонтакте
           </a>
         </li>
@@ -230,9 +280,150 @@
   </div>
 
   <div class="footer-bottom">
-    <p>© 2026 МЫНЕМЫ. Все права защищены.</p>
-    <a href="#top">Наверх</a>
+    <p data-i18n="copyright">© 2026 МЫНЕМЫ. Все права защищены.</p>
+    <a href="#top" data-i18n="backTop">Наверх</a>
   </div>
 </footer>
+
+<script>
+  const translations = {
+    ru: {
+      navMusic: "Музыка",
+      navVideo: "Видео",
+      navBio: "Био",
+      navGallery: "Фото",
+      navContact: "Контакты",
+
+      heroLine: "ТАМ, ГДЕ МОЛЧИТ ЗВЁЗДНЫЙ СВЕТ",
+      listenBtn: "Слушать",
+      watchBtn: "Смотреть видео",
+
+      musicTitle: "Музыка",
+      spotifyTitle: "Слушай нас на Spotify",
+
+      videoTitle: "Видео",
+      moreVideos: "Больше видео на YouTube",
+
+      bioSmall: "Био",
+      bioTitle: "Мы говорим наши мысли через звук.",
+      bioText1:
+        "Привет — мы МЫНЕМЫ. Нас двое. Мы встретились и объединились, чтобы озвучить то, что живёт внутри. Мы говорим наши мысли через звук — с оттенком минора.",
+      bioText2:
+        "Этот проект не просто о музыке, а о том, что рождается в тишине между словами. Мы не рассказываем истории — мы проживаем их заново.",
+
+      gallerySmall: "Фото",
+      galleryTitle: "Галерея",
+
+      contactsSmall: "Контакты",
+      contactsTitle: "Связаться",
+      management: "Менеджмент",
+      booking: "Букинг",
+      press: "Пресса",
+      managementName: "Мария Лепетова",
+      bookingName: "Дмитрий Букреев",
+      pressName: "Дмитрий Букреев",
+      links: "Ссылки",
+
+      yandexMusic: "Яндекс Музыка",
+      vkontakte: "ВКонтакте",
+
+      copyright: "© 2026 МЫНЕМЫ. Все права защищены.",
+      backTop: "Наверх",
+    },
+
+    en: {
+      navMusic: "Music",
+      navVideo: "Video",
+      navBio: "Bio",
+      navGallery: "Photos",
+      navContact: "Contact",
+
+      heroLine: "WHERE STARLIGHT FALLS SILENT",
+      listenBtn: "Listen",
+      watchBtn: "Watch video",
+
+      musicTitle: "Music",
+      spotifyTitle: "Listen to us on Spotify",
+
+      videoTitle: "Video",
+      moreVideos: "More videos on YouTube",
+
+      bioSmall: "Bio",
+      bioTitle: "We speak our thoughts through sound.",
+      bioText1:
+        "Hi — we are MYNEMY. There are two of us. We met and came together to give sound to what lives inside. We speak our thoughts through music — with a minor shade.",
+      bioText2:
+        "This project is not just about music. It is about what is born in the silence between words. We do not tell stories — we live through them again.",
+
+      gallerySmall: "Photos",
+      galleryTitle: "Gallery",
+
+      contactsSmall: "Contact",
+      contactsTitle: "Get in touch",
+      management: "Management",
+      booking: "Booking",
+      press: "Press",
+      managementName: "Maria Lepetova",
+      bookingName: "Dmitrii Bukreev",
+      pressName: "Dmitrii Bukreev",
+      links: "Links",
+
+      yandexMusic: "Yandex Music",
+      vkontakte: "VKONTAKTE",
+
+      copyright: "© 2026 MYNEMY. All rights reserved.",
+      backTop: "Back to top",
+    },
+  };
+
+  function setLanguage(lang) {
+    const dictionary = translations[lang] || translations.ru;
+
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const key = element.dataset.i18n;
+
+      if (dictionary[key]) {
+        element.textContent = dictionary[key];
+      }
+    });
+
+    document.querySelectorAll("[data-lang-choice]").forEach((button) => {
+      button.classList.toggle(
+        "is-active",
+        button.dataset.langChoice === lang
+      );
+    });
+
+    localStorage.setItem("siteLanguage", lang);
+
+    const modal = document.getElementById("languageModal");
+
+    if (modal) {
+      modal.classList.add("is-hidden");
+    }
+
+    document.body.classList.remove("lang-modal-open");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLanguage = localStorage.getItem("siteLanguage");
+    const modal = document.getElementById("languageModal");
+
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    } else {
+      modal.classList.remove("is-hidden");
+      document.body.classList.add("lang-modal-open");
+    }
+
+    document.querySelectorAll("[data-lang-choice]").forEach((button) => {
+      button.addEventListener("click", () => {
+        setLanguage(button.dataset.langChoice);
+      });
+    });
+  });
+</script>
 </body>
 </html>
